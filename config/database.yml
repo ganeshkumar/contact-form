@@ -13,9 +13,10 @@ default: &default
   adapter: mysql2
   encoding: utf8
   reconnect: false
+  database: contact_form_development
   pool: 25
   username: root
-  password: root
+  password: password
   host: localhost
 
 development:
