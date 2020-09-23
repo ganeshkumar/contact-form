@@ -1,0 +1,15 @@
+{
+  "send_us_message": "Send Us A Message",
+  "tell_us_ur_name": "TELL US YOUR NAME",
+  "first_name": "First name",
+  "last_name": "Last name",
+  "enter_ur_email": "Enter your email *",
+  "enter_phone_no": "Enter phone number",
+  "message": "Message *",
+  "write_us_message": "Write us a message",
+  "send_message": "Send Message",
+  "type_first_name": "Type first name",
+  "type_last_name": "Type last name",
+  "valid_email_format": "Valid email is required: ex@abc.xyz",
+  "enter_message": "Message is required"
+}

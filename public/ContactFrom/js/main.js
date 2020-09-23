@@ -2,7 +2,17 @@
 (function ($) {
     "use strict";
 
-
+    $.i18n().load( {
+       'en': './js/i18n/en.json',
+       'ru': './js/i18n/ru.json'
+     } ).done(function() {
+         $('.switch-locale').on('change', function(e) {
+           e.preventDefault();
+           $.i18n().locale = this.value;
+           $('body').i18n();
+         });
+          $('body').i18n();
+       });
 
 
 

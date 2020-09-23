@@ -28,46 +28,48 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
+	<label for="languages">Languages:</label>
+	<select class="switch-locale">
+		<option value='en'>English</option>
+		<option value='ru'>Russian</option>
+	</select>
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form">
-				<span class="contact100-form-title">
-					Send Us A Message
+				<span class="contact100-form-title" data-i18n="send_us_message">
 				</span>
 
-				<label class="label-input100" for="first-name">Tell us your name *</label>
-				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-					<input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+				<label class="label-input100" for="first-name" data-i18n="tell_us_ur_name"></label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-i18n="[data-validate]type_first_name">
+					<input id="first-name" class="input100" type="text" name="first-name"  data-i18n="[placeholder]first_name">
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-					<input class="input100" type="text" name="last-name" placeholder="Last name">
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-i18n="[data-validate]type_last_name">
+					<input class="input100" type="text" name="last-name" data-i18n="[placeholder]last_name">
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="email">Enter your email *</label>
-				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+				<label class="label-input100" for="email" data-i18n="enter_ur_email"></label>
+				<div class="wrap-input100 validate-input" data-i18n="[data-validate]valid_email_format">
 					<input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="phone">Enter phone number</label>
+				<label class="label-input100" for="phone" data-i18n="enter_phone_no"></label>
 				<div class="wrap-input100">
 					<input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="message">Message *</label>
-				<div class="wrap-input100 validate-input" data-validate = "Message is required">
-					<textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
+				<label class="label-input100" for="message" data-i18n="message"></label>
+				<div class="wrap-input100 validate-input" data-i18n="[data-validate]message">
+					<textarea id="message" class="input100" name="message" data-i18n="[placeholder]write_us_message"></textarea>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						Send Message
+					<button class="contact100-form-btn"  data-i18n="send_message">
 					</button>
 				</div>
 			</form>
@@ -149,7 +151,7 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
@@ -159,5 +161,14 @@
 
 	  gtag('config', 'UA-23581568-13');
 	</script>
+	<script src="js/lib/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.messagestore.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.fallbacks.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.language.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.parser.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.emitter.js"></script>
+	<script src="js/lib/jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

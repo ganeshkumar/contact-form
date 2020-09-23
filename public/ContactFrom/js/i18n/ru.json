@@ -1,0 +1,15 @@
+{
+  "send_us_message": "Напишите нам сообщение",
+  "tell_us_ur_name": "СКАЗАТЬ НАМ ВАШЕ ИМЯ",
+  "first_name": "Имя",
+  "last_name": "Фамилия",
+  "enter_ur_email": "Введите адрес электронной почты *",
+  "enter_phone_no": "Введите номер телефона",
+  "message": "Сообщение *",
+  "write_us_message": "Напишите нам сообщение",
+  "send_message": "Отправить сообщение",
+  "type_first_name": "Введите имя",
+  "type_last_name": "Введите фамилию",
+  "valid_email_format": "Требуется действующий адрес электронной почты: ex@abc.xyz",
+  "enter_message": "Сообщение обязательно"
+}
