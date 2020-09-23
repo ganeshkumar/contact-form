@@ -18,6 +18,33 @@ RSpec.describe Api::V1::ContactsController, type: :controller do
     expect(response.content_type).to eq "application/json"
   end
 
+  it 'POST#create should send email after create an entry to db' do
+    contact_params = {
+      contact: {
+        first_name: 'foo',
+        last_name: 'bar',
+        email: 'foobar@example.com',
+        phone_number: '1800100100',
+        message: 'test message'
+      }
+    }
+    # Make sure deliveries is zero
+    expect(ActionMailer::Base.deliveries.count).to eq 0
+
+    post :create, params: contact_params, format: :json
+
+    expect(Contact.count).to eq 1
+    expect(response).to have_http_status(:created)
+    expect(response.content_type).to eq "application/json"
+
+
+    last_delivery = ActionMailer::Base.deliveries.last
+    expect(ActionMailer::Base.deliveries.count).to eq 1
+    expect(last_delivery.subject).to eq("User contacted for further info")
+    expect(last_delivery.to).to eq(['info@ajackus.com'])
+    expect(last_delivery.body.encoded).to match('foo bar')
+  end
+
   it 'POST#create should not create entry in db with in-valid params' do
     contact_params = {
       contact: {

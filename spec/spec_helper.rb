@@ -18,6 +18,7 @@ SimpleCov.start do
   add_group "Models", "app/models"
   add_group "Controllers", "app/controllers"
   add_group "Routes", "config/routes"
+  add_group "Mailers", "app/mailers"
 end
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
