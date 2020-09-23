@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   get '/contact', to: new_contact
   root to: new_contact
 
+  namespace :api do
+    namespace :v1 do
+      resource :contact, only: [:create]
+    end
+  end
+
   match '*path',  to: redirect('/404'), via: :all
 end
