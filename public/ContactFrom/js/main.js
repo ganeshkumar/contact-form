@@ -11,6 +11,7 @@
            $.i18n().locale = this.value;
            $('body').i18n();
          });
+          $.i18n().locale = 'en';
           $('body').i18n();
        });
 
@@ -29,10 +30,38 @@
                 check=false;
             }
         }
+        if (check)
+        {
+          var data = {
+            contact: {
+              first_name: $('#first-name').val(),
+              last_name: $('#last-name').val(),
+              email: $('#email').val(),
+              phone_number: $('#phone').val(),
+              message: $('#message').val()
+            }
+          };
 
-        return check;
+          $.ajax({
+              type: "POST",
+              url: '/api/v1/contact',
+              data: JSON.stringify(data),
+              dataType:"json",
+              contentType: 'application/json',
+              success: function(response) {
+                // we can use response object later if you want to display anything from it.
+                $( "#result" ).empty().append( 'Success! We will get in touch with you soon.' );
+                $('#contact-form').trigger("reset");
+              },
+              error: function(xhr, status, error) {
+                // we can use xhr object to display error / to send notitification to development team
+                // like wise we can use error object depending upon business requirement.
+                $( "#result" ).empty().append( 'Something went wrong! please try again later.' );
+              }
+            });
+        }
+        return false;
     });
-
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
