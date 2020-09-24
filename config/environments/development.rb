@@ -44,10 +44,10 @@ Rails.application.configure do
 
   # SMTP settings
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.mandrillapp.com",
+    :address              => "smtp-relay.sendinblue.com",
     :port                 => 587,
-    :user_name            => '<username>',
-    :password             => '<password>',
+    :user_name            => 'ganesh.dc@gmail.com',
+    :password             => 'fwkYBz8L3v9aEsJ5',
     :authentication       => "plain"
   }
 
