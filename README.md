@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- This project uses mysql as database. If you don't have it in your system please install it.
 
-Things you may want to cover:
+- Replace config/database.yml file with your username and password
 
-* Ruby version
+- Replace Mailer setting in config/envirornments/development.rb file. with your username and password.
 
-* System dependencies
+- Goto project dirctory i.e. contact-form
 
-* Configuration
+- Run 'bundle install'
 
-* Database creation
+- Run 'rake db:create'
 
-* Database initialization
+- Run 'rake db:migrate'
 
-* How to run the test suite
+- To run test cases run 'bundle exec rspec'
 
-* Services (job queues, cache servers, search engines, etc.)
+- To see coverage please check coverage fodler index.html file
 
-* Deployment instructions
+- To run the app 'bundle exec rails s'
 
-* ...
+- goto browser and type 'http://localhost:3000/ or http://localhost:3000/contact" should redirect to contact form. 
+   All other url's eg: http://loclhost:3000/contact-new should goto 404 page
+   
+- After getting form you choose ur language from dropdown and the form should show in respective language (internationalization done using Jquery plugin i18n)
+
+- Try to submit the form without filling details and see errors show in respective language.
+
+- Try to submit after filling all required fields you should be able to see success message in UI and an entry in database table and you should get email.
+
+- Thank you!
